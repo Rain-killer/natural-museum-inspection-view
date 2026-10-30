@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#60aa90">
+  <title>国家自然博物馆多媒体设施维保</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="brand"><img src="assets/museum-brand.png" alt="国家自然博物馆 Natural History Museum of China"></header>
+  <main>
+    <section class="hero"><div><p>多媒体设施维保服务项目</p><h1>展项设施巡检展示</h1><span>客户只读预览版 · 数据更新日期：2026-10-30</span></div><b>仅供查阅</b></section>
+    <section class="base card"><h2>基础信息</h2><dl><div><dt>合同起始日期</dt><dd>2026-09-01</dd></div><div><dt>合同截止日期</dt><dd>2027-08-31</dd></div><div><dt>项目负责人</dt><dd>胡依</dd></div><div><dt>服务公司</dt><dd>北京铭尚天乐科技发展有限公司</dd></div><div><dt>服务人员</dt><dd>孙宇</dd></div><div><dt>服务电话</dt><dd>18518780821</dd></div><div><dt>采购单位</dt><dd>国家自然博物馆</dd></div><div><dt>服务地点</dt><dd>北京市东城区天桥南大街126号</dd></div></dl></section>
+    <div class="layout"><nav><button class="tab active" data-tab="device">设备状态</button><button class="tab" data-tab="inspection">巡检记录</button><button class="tab" data-tab="report">报表</button></nav><div>
+      <section class="panel active" id="device-panel"><div class="head"><div><h2>设备状态</h2><p>仅展示每台设备最近一次已填写的巡检状态。</p></div><label>展区<select id="device-zone"></select></label></div><section class="kpis five"><article><span>设备总数</span><strong id="device-total">63</strong></article><article><span>运行正常</span><strong id="device-normal">0</strong></article><article><span>异常待处理</span><strong id="device-issues">0</strong></article><article><span>待复检</span><strong id="device-review">0</strong></article><article><span>暂无记录</span><strong id="device-empty">0</strong></article></section><div id="device-cards" class="device-cards"></div></section>
+      <section class="panel" id="inspection-panel"><div class="head"><div><h2>巡检记录</h2><p>每月 4 次全覆盖巡检记录，可按月份和序次查看。</p></div><div class="filters"><label>月份<select id="inspection-month"></select></label><label>序次<select id="inspection-round"><option value="1">第 1 次</option><option value="2">第 2 次</option><option value="3">第 3 次</option><option value="4">第 4 次</option></select></label></div></div><section id="inspection-info" class="inspection-info card"></section><section id="inspection-kpis" class="kpis four"></section><section id="inspection-records" class="records"></section></section>
+      <section class="panel" id="report-panel"><div class="head"><div><h2>历史报表</h2><p>汇总合同期内的月度覆盖率及异常闭环情况。</p></div></div><section id="report-kpis" class="kpis four"></section><section class="card table-card"><h2>月度巡检汇总</h2><div class="table-wrap"><table><thead><tr><th>月份</th><th>应巡记录</th><th>已巡记录</th><th>覆盖率</th><th>正常</th><th>异常</th><th>第 1 次</th><th>第 2 次</th><th>第 3 次</th><th>第 4 次</th></tr></thead><tbody id="report-table"></tbody></table></div></section><section class="card table-card"><h2>异常闭环清单</h2><div class="table-wrap"><table><thead><tr><th>发现时间</th><th>展区 / 展项</th><th>故障描述</th><th>处理结果</th><th>复检结论</th><th>当前状态</th></tr></thead><tbody id="issue-table"></tbody></table></div></section></section>
+    </div></div>
+  </main>
+  <div class="modal" id="image-modal" aria-hidden="true"><button aria-label="关闭" id="close-modal">×</button><img id="modal-image" alt="设备图片"><p id="modal-caption"></p></div>
+  <script src="app.js"></script>
+</body>
+</html>
